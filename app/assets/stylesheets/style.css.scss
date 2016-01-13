@@ -1,0 +1,59 @@
+@font-face {
+	font-family: 'Brandon Text';
+	src: asset-url('BrandonText-Regular.eot?#iefix') format('embedded-opentype'), 
+	     asset-url('BrandonText-Regular.woff') format('woff'), 
+	     asset-url('BrandonText-Regular.ttf')  format('truetype'),
+	     asset-url('BrandonText-Regular.svg#svgFontName') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brandon Text';
+	src: asset-url('BrandonText-Bold.eot?#iefix') format('embedded-opentype'), 
+	     asset-url('BrandonText-Bold.woff') format('woff'), 
+	     asset-url('BrandonText-Bold.ttf')  format('truetype'),
+	     asset-url('BrandonText-Bold.svg#svgFontName') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Brandon Text', sans-serif;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  -webkit-transition: border-color 0.1s;
+  transition: border-color 0.1s;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.bg-green {
+  background-color: #00C6A5;
+}
+
+.bg-red {
+  background-color: #DC6E6D;
+}
+
+.green {
+  color: #00C6A5;
+}
+
+.red {
+  color: #DC6E6D;
+}
+
+.banner {
+  -webkit-transition: color 0.1s, background-color 0.1s;
+  transition: color 0.1s, background-color 0.1s;
+
+  &:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #00C6A5;
+  }
+}

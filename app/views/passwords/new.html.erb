@@ -1,0 +1,42 @@
+<div id="clearance" class="password-reset">
+  <div class="container">
+    <div class="clearfix mt4">
+      <div class="sm-show">
+        <div class="col-4 mx-auto">
+          <h1 class="regular"><%= t(".title") %></h1>
+
+          <p><%= t(".description") %></p>
+
+          <%= form_for :password, url: passwords_path do |form| %>
+            <div class="text-field mt1">
+              <%= form.label :email, class: 'block' %>
+              <%= form.text_field :email, type: 'email', class: 'field light', style: 'width:100%;' %>
+            </div>
+
+            <div class="submit-field">
+              <%= form.submit 'Reset password', class: 'btn btn-primary bg-green white mt2 py2 regular', style: 'width:100%;' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="sm-hide">
+        <div class="col-10 mx-auto">
+          <h2><%= t(".title") %></h2>
+
+          <p><%= t(".description") %></p>
+
+          <%= form_for :password, url: passwords_path do |form| %>
+            <div class="text-field">
+              <%= form.label :email %>
+              <%= form.text_field :email, type: 'email' %>
+            </div>
+
+            <div class="submit-field">
+              <%= form.submit %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

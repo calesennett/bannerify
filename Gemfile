@@ -1,10 +1,11 @@
 source "https://rubygems.org"
 
-ruby "2.3.0"
+ruby "2.3.1"
 
-gem "airbrake"
 gem "autoprefixer-rails"
 gem "bourbon", "~> 4.2.0"
+gem "bullet"
+gem "clearance"
 gem "coffee-rails", "~> 4.1.0"
 gem "delayed_job_active_record"
 gem "flutie"
@@ -43,7 +44,6 @@ group :development, :test do
 end
 
 group :test do
-  gem "capybara-webkit"
   gem "database_cleaner"
   gem "formulaic"
   gem "launchy"
