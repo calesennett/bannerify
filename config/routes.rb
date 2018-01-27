@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   get '/dashboard' => 'dashboard#index', as: :dashboard
 
   # banners
-  get  '/banners/new' => 'banners#new',    as: :new_banner
-  post '/banners'     => 'banners#create', as: :banners
+  resources :banners, only: [:new, :create, :update]
 
   # clearance
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
@@ -18,7 +17,7 @@ Rails.application.routes.draw do
       only: [:create, :edit, :update]
   end
 
-  get "/sign_in" => "clearance/sessions#new", as: :sign_in
-  get "/sign_out" => "clearance/sessions#destroy", as: :sign_out
-  get "/sign_up" => "clearance/users#new", as: :sign_up
+  get "/signin" => "clearance/sessions#new", as: :sign_in
+  delete "/signout" => "clearance/sessions#destroy", as: :sign_out
+  get "/signup" => "clearance/users#new", as: :sign_up
 end
