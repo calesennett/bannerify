@@ -1,0 +1,25 @@
+<%= render 'shared/top_bar' %>
+<div class="container overflow-hidden px1">
+  <div class="clearfix">
+    <h1 class="regular mb0">New banner</h1>
+    <p class="gray">Create a new banner that will display on your website.</p>
+    <hr />
+  </div>
+
+  <div class="clearfix mt1">
+    <div class="sm-col sm-col-12 md-col-4">
+      <%= render 'shared/errors', obj: @banner %>
+      <%= form_for @banner do |f| %>
+        <%= f.label :title, class: 'block' %>
+        <%= f.text_field :title, placeholder: '20% Off Sale', class: 'field light', style: 'width:100%' %>
+        <%= f.label :description, class: 'block mt1' %>
+        <%= f.text_field :description, placeholder: '20% everything in our online store.', class: 'field light mb1', style: 'width:100%' %>
+        <%= f.label :current, 'Make active banner', class: 'mr1' %>
+        <%= f.check_box :current %>
+        <div class="clearfix">
+          <%= f.submit 'Create banner', class: 'btn btn-primary bg-green regular mt2' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

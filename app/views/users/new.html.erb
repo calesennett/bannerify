@@ -1,0 +1,48 @@
+<div id="clearance" class="sign-up">
+  <div class="container">
+    <div class="clearfix mt4">
+      <div class="sm-show">
+        <div class="col-4 mx-auto">
+          <h1 class="regular">Bannerify</h1>
+
+          <% if @user.errors.any? %>
+            <ul class="list-reset">
+              <% @user.errors.full_messages.each do |err| %>
+                <li class="red"><%= err %></li>
+              <% end %>
+            </ul>
+          <% end %>
+
+          <%= form_for @user do |form| %>
+            <%= render partial: '/users/form', object: form %>
+
+            <div class="submit-field">
+              <%= form.submit 'Create your banner', class: 'btn btn-primary bg-green white regular mt2 py2', style: 'width:100%;' %>
+            </div>
+
+            <div class="other-links mt2">
+              <%= link_to t(".sign_in"), sign_in_path %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="sm-hide">
+        <div class="col-10 mx-auto">
+          <h2>Bannerify</h2>
+
+          <%= form_for @user do |form| %>
+            <%= render partial: '/users/form', object: form %>
+
+            <div class="submit-field">
+              <%= form.submit %>
+            </div>
+
+            <div class="other-links">
+              <%= link_to t(".sign_in"), sign_in_path %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

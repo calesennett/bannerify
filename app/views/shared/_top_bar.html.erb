@@ -1,0 +1,20 @@
+<div class="container px1">
+  <div class="clearfix mt2">
+    <div class="lg-show">
+      <div class="flex flex-center">
+        <h1 class="green caps h2 mt1 mxn2 py1"><%= link_to 'Bannerify', root_path, class: 'green left-align btn' %></h1>
+        <div class="flex-auto"></div>
+        <%= link_to 'Create banner', new_banner_path, class: 'btn btn-primary regular rounded bg-green white mr3' %>
+        <%= link_to 'Log out', sign_out_path, class: 'red' %>
+      </div>
+    </div>
+    <div class="lg-hide">
+      <div class="flex flex-center">
+        <h1 class="green h2 py1 mt1">bnrfy</h1>
+        <div class="flex-auto"></div>
+        <%= link_to 'Create banner', new_banner_path, class: 'btn btn-primary py2 regular rounded bg-green white mr2' %>
+        <%= link_to 'Log out', sign_out_path, class: 'red' %>
+      </div>
+    </div>
+  </div>
+</div>
