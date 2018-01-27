@@ -10,7 +10,7 @@
           <div class="clearfix mxn2 mt3">
             <% group.each do |banner| %>
               <div class="sm-col sm-col-4 px2">
-                <div class="banner p2 <%= banner.current ? 'bg-green white' : '' %> border rounded" data-banner-id="<%= banner.id %>">
+                <div class="banner p2 <%= banner.current ? 'current bg-green white' : '' %> border rounded" data-banner-id="<%= banner.id %>">
                   <h1 class="h2 mt0 regular"><%= banner.title %></h1>
                   <p class="mb0"><%= banner.description %></p>
                 </div>
@@ -30,13 +30,13 @@
       <hr />
       <div class="clearfix mxn2 mt3">
         <div class="sm-col sm-col-4 px2">
-          <div class="banner-style p2 bg-green border rounded">
-            <h1 class="h2 mt0 white regular">Top of site</h1>
+          <div class="banner-style <%= current_user.banner_style == "top_of_site" ? 'current-style bg-green white' : '' %> p2 border rounded" data-banner-style="top_of_site">
+            <h1 class="h2 mt0 regular">Top of site</h1>
             <img alt="top of site banner style" class="rounded border" src=<%= image_path('banner-styles/top-banner.png') %> />
           </div>
         </div>
         <div class="sm-col sm-col-4 px2">
-          <div class="banner-style p2 border rounded">
+          <div class="banner-style <%= current_user.banner_style == "modal" ? 'current-style bg-green white' : '' %> p2 border rounded" data-banner-style="modal">
             <h1 class="h2 mt0 regular">Center modal</h1>
             <img alt="center modal banner style" class="rounded border" src=<%= image_path('banner-styles/center-modal.png') %> />
           </div>
