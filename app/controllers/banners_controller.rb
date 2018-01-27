@@ -25,7 +25,7 @@ class BannersController < ApplicationController
         end
 
         render json: {
-          saved: banner.update(current: true)
+          saved: banner.update(banner_params)
         }
       }
     end
@@ -42,7 +42,8 @@ class BannersController < ApplicationController
     params.require(:banner).permit(
       :title,
       :description,
-      :current
+      :current,
+      :style
     )
   end
 end

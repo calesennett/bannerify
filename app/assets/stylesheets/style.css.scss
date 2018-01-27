@@ -1,8 +1,8 @@
 @font-face {
 	font-family: 'Brandon Text';
-	src: asset-url('BrandonText-Regular.eot?#iefix') format('embedded-opentype'), 
-	     asset-url('BrandonText-Regular.woff') format('woff'), 
-	     asset-url('BrandonText-Regular.ttf')  format('truetype'),
+	src: asset-url('BrandonText-Regular.eot?#iefix') format('embedded-opentype'),
+       asset-url('BrandonText-Regular.woff') format('woff'),
+       asset-url('BrandonText-Regular.ttf')  format('truetype'),
 	     asset-url('BrandonText-Regular.svg#svgFontName') format('svg');
   font-weight: normal;
   font-style: normal;
@@ -47,7 +47,7 @@ input[type=text], input[type=email], input[type=password] {
   color: #DC6E6D;
 }
 
-.banner {
+.banner, .banner-style {
   -webkit-transition: color 0.1s, background-color 0.1s;
   transition: color 0.1s, background-color 0.1s;
 
