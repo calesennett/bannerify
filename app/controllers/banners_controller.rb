@@ -15,6 +15,27 @@ class BannersController < ApplicationController
     end
   end
 
+  def update
+    respond_to do |format|
+      format.json {
+        banner = Banner.find(params[:id])
+
+        current_user.banners.where.not(id: banner.id).each do |b|
+          b.update(current: false)
+        end
+
+        render json: {
+          saved: banner.update(current: true)
+        }
+      }
+    end
+
+  rescue ActiveRecord::RecordNotFound
+    render json: {
+      saved: false
+    }
+  end
+
   private
 
   def banner_params

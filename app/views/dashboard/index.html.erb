@@ -10,7 +10,7 @@
           <div class="clearfix mxn2 mt3">
             <% group.each do |banner| %>
               <div class="sm-col sm-col-4 px2">
-                <div class="banner p2 <%= banner.current ? 'bg-green white' : '' %> border rounded">
+                <div class="banner p2 <%= banner.current ? 'bg-green white' : '' %> border rounded" data-banner-id="<%= banner.id %>">
                   <h1 class="h2 mt0 regular"><%= banner.title %></h1>
                   <p class="mb0"><%= banner.description %></p>
                 </div>
