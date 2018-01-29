@@ -15,7 +15,7 @@
         <%= f.label :description, class: 'block mt1' %>
         <%= f.text_field :description, placeholder: '20% everything in our online store.', class: 'field light mb1', style: 'width:100%' %>
         <%= f.label :current, 'Make active banner', class: 'mr1' %>
-        <%= f.check_box :current %>
+        <%= f.check_box :current, {}, true %>
         <div class="clearfix">
           <%= f.submit 'Create banner', class: 'btn btn-primary bg-green regular mt2' %>
         </div>

@@ -2,5 +2,7 @@ class Banner < ActiveRecord::Base
   belongs_to :user
   has_one :domain
 
-  scope :current, -> { where(current: true).take }
+  def self.current
+    where(current: true).take
+  end
 end

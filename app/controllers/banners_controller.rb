@@ -6,6 +6,10 @@ class BannersController < ApplicationController
   end
 
   def create
+    if banner_params[:current].present?
+      current_user.banners.each {|b| b.update(current: false)}
+    end
+
     banner = current_user.banners.new(banner_params)
 
     if banner.save

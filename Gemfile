@@ -22,6 +22,7 @@ gem "recipient_interceptor"
 gem "sass-rails", "~> 5.0"
 gem "simple_form"
 gem "title"
+gem "turbolinks"
 gem "uglifier"
 
 group :development do
