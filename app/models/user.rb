@@ -5,10 +5,10 @@ class User < ActiveRecord::Base
   has_many :domains
 
   def banner
-    banners.current
+    banners.current&.first
   end
 
   def banner_style
-    banners&.current&.style
+    banner&.style
   end
 end

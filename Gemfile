@@ -1,12 +1,11 @@
 source "https://rubygems.org"
 
-ruby "2.3.1"
+ruby "2.5.1"
 
 gem "autoprefixer-rails"
-gem "bourbon", "~> 4.2.0"
 gem "bullet"
 gem "clearance"
-gem "coffee-rails", "~> 4.1.0"
+gem "coffee-rails"
 gem "delayed_job_active_record"
 gem "flutie"
 gem "high_voltage"
@@ -17,7 +16,7 @@ gem "normalize-rails", "~> 3.0.0"
 gem "pg"
 gem "puma"
 gem "rack-canonical-host"
-gem "rails", "~> 4.2.0"
+gem "rails", "~> 6.0.3.2"
 gem "recipient_interceptor"
 gem "sass-rails", "~> 5.0"
 gem "simple_form"
@@ -25,7 +24,6 @@ gem "title"
 gem "uglifier"
 
 group :development do
-  gem "quiet_assets"
   gem "refills"
   gem "spring"
   gem "spring-commands-rspec"
@@ -40,7 +38,7 @@ group :development, :test do
   gem "factory_girl_rails"
   gem "pry-byebug"
   gem "pry-rails"
-  gem "rspec-rails", "~> 3.4.0"
+  gem "rspec-rails"
 end
 
 group :test do
